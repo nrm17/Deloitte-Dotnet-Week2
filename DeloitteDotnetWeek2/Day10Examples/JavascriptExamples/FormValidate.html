@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        function Validate()
+        {
+            var name = document.getElementById("txtname").value;
+            if(name=="")
+            {
+                alert("Name cannot be blank");
+                return; // goes back to calling function wont execute further
+            }
+
+            var age = parseInt(document.getElementById("txtage").value);
+            if (isNaN(age))
+            {
+                alert("Enter age as number");
+                return;
+            }
+
+
+            var pass = document.getElementById("txtpass").value;
+            if (pass == "") {
+                alert("Password cant be blank");
+                return;
+
+            }
+            if (pass.length < 3 || pass.length > 5)
+            {
+                alert("Password hsould be between 3 to 5 characters length");
+                return;
+            }
+
+            var g = "";
+            var gen = document.getElementsByName("gen");
+            if (gen[0].checked)
+                g = gen[0].value;
+            if (gen[1].checked)
+                g = gen[1].value;
+
+            if(!gen[0].checked && !gen[1].checked)
+            {
+                alert("Select gender")
+                return;
+            }
+                
+
+            var c = "";
+            var cab = document.getElementById("cbcab");
+            if (cab.checked)
+                c = "Cab required";
+            else
+                c = "Cab not required";
+
+
+
+            var loc = document.getElementById("loc").value;
+            if (loc == "select")
+            {
+                alert("Select a location");
+                return;
+            }
+            
+
+
+
+
+            alert("Data you entered :" + name + "," + age + ", Password Valid" + "," + g + "," + c +"," + loc);
+
+            
+
+
+            
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <td> Enter Name:</td>
+                <td><input type="text" id="txtname" /></td>
+            </tr>
+
+            <tr>
+                <td>Enter Age:</td>
+                <td><input type="number" id="txtage" /></td>
+            </tr>
+            <tr>
+                <td>Enter Password:</td>
+                <td><input type="password" id="txtpass" /></td>
+            </tr>
+            <tr>
+                <td>Enter Gender</td>
+                <td><input type="radio" name="gen" value="Male" />Male
+                <input type="radio" name="gen" value="Female" />Female</td>
+            </tr>
+            <tr>
+                <td>Cab Facility</td>
+                <td><input type="checkbox" id="cbcab" /></td>
+                
+            </tr>
+            <tr>
+                <td>Select Location</td>
+                <td><select id="loc">
+                    <option value="select">select</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Gurgaon">Gurgaon</option>
+                    </select>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="Validate()">Validate</button>
+                </td>
+            </tr>
+
+        </table>
+
+
+    </form>
+
+</body>
+</html>

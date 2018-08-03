@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+ $(document).ready(function () {
+     $("button").click(function () {
+         var name = $("txtname").val();
+         if(name == "")
+         {
+             alert("Name connot be blank");
+             return;
+         }
+
+         var age = parseInt($("#txtage").val())
+         if (isNaN(age)) {
+             alert("Enter age as number");
+             return;
+         }
+
+
+         var pass = $("#txtpass").val();
+         if (pass == "") {
+             alert("Password cant be blank");
+             return;
+
+         }
+         if (pass.length < 3 || pass.length > 5) {
+             alert("Password hsould be between 3 to 5 characters length");
+             return;
+         }
+
+         var g = "";
+         var gen = $("input:radio[name='gen']:checked");
+         if (gen == 0) {
+             alert("Select Gender");
+             return;
+         }
+         else
+             g = gen.val();
+
+        
+         }
+
+
+       
+       )
+
+
+
+
+         
+     });
+  
+
+ 
+    </script>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <td> Enter Name:</td>
+                <td><input type="text" id="txtname" /></td>
+            </tr>
+
+            <tr>
+                <td>Enter Age:</td>
+                <td><input type="number" id="txtage" /></td>
+            </tr>
+            <tr>
+                <td>Enter Password:</td>
+                <td><input type="password" id="txtpass" /></td>
+            </tr>
+            <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+                <td>Enter Gender</td>
+                <td>
+                    <input type="radio" name="gen" value="Male" />Male
+                    <input type="radio" name="gen" value="Female" />Female
+                </td>
+            </tr>
+            <tr>
+                <td>Cab Facility</td>
+                <td><input type="checkbox" id="cbcab" /></td>
+
+            </tr>
+            <tr>
+                <td>Select Location</td>
+                <td>
+                    <select id="loc">
+                        <option value="select">select</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                    </select>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <button>Validate</button>
+                </td>
+            </tr>
+
+        </table>
+
+
+    </form>
+</body>
+</html>

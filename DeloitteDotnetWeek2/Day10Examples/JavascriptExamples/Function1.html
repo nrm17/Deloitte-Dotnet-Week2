@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+       function Add()
+        {
+           var fname = prompt("Enter first name");
+           var lname = prompt("Enter second name ");
+           var fullname = fname + " " + lname ;
+           alert("Full name is : " + fullname);
+       }
+       function Addnew(a,b)
+       {
+           alert("Addition is : " + (a + b));
+       }
+       function CallAdd() // to take input from user
+       {
+           var n1 = parseFloat(prompt("Enter floating number 1 "));
+           var n2 = parseFloat(prompt("Enter floating number 2 "));
+           Addnew(n1, n2);
+
+       }
+       function calcsi(p,n,r)
+       {
+           return (p * r * n) / 100;
+       }
+       function cal()
+       {
+           var n = parseFloat(prompt("enter princicpal"));
+           var n1 = parseFloat(prompt("enter rate"));
+           var n2 = parseFloat(prompt("enter number of years"));
+           var n3 = calcsi(n, n1, n2);
+
+           alert("Simple interest is " + n3);
+       }
+    </script>
+</head>
+<body>
+    <button onclick="Add()">No Paramter No Return Type</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <button onclick="CallAdd()">With paramter</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <button onclick="cal()">With return type</button>
+</body>
+</html>

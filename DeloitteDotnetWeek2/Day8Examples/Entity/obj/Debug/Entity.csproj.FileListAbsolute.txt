@@ -1,0 +1,4 @@
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\Entity\bin\Debug\Entity.dll
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\Entity\bin\Debug\Entity.pdb
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\Entity\obj\Debug\Entity.dll
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\Entity\obj\Debug\Entity.pdb

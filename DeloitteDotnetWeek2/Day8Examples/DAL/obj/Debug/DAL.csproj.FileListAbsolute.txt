@@ -1,0 +1,10 @@
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\bin\Debug\DAL.dll
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\bin\Debug\DAL.pdb
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\obj\Debug\DAL.dll
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\obj\Debug\DAL.pdb
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\bin\Debug\DAL.dll.config
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\bin\Debug\Entity.dll
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\bin\Debug\EntityFramework.dll
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\bin\Debug\Entity.pdb
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\bin\Debug\EntityFramework.xml
+C:\Users\nexwave\documents\visual studio 2015\Projects\Day8Examples\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VisitorDBModel1StoreContainer" CdmEntityContainer="VisitorDBEntities2">
+    <EntitySetMapping Name="VisitorInfoes">
+      <EntityTypeMapping TypeName="VisitorDBModel1.VisitorInfo">
+        <MappingFragment StoreEntitySet="VisitorInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Visiting" ColumnName="Visiting" />
+          <ScalarProperty Name="ID_Type" ColumnName="ID Type" />
+          <ScalarProperty Name="ID_Num" ColumnName="ID Num" />
+          <ScalarProperty Name="Vehicle_Num" ColumnName="Vehicle Num" />
+          <ScalarProperty Name="Contact_num" ColumnName="Contact num" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

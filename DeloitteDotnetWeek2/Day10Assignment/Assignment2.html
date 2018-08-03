@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".add-row").click(function(){
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var type = $("#type").val();
+                if (type == "select") {
+                    alert("select pizza type");
+                    return;
+                }
+                var size = $("#size").val();
+                if (size == "select") {
+                    alert("select pizza type");
+                    return;
+                }
+                var qty=$("#Qty").val();
+                if(qty<1 || qty==""){
+                    alert("enter the qty");
+                    return;
+
+                }
+                if (type == "Veg") {
+                var top=
+
+}
+                var markup = "<tr><td>"+type+"</td><td>"+size+"</td><td> email </td><td>"+qty+"</td></tr>";
+                $("table tbody").append(markup);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <form>
+        Pizza Type    :<select id="type"><option value="select">select</option><option value="Veg">Veg</option><option value="NonVeg">NonVeg</option></select><br />
+        Pizza Size    :<select id="size"><option value="select">select</option><option value="small">small</option><option value="medium">medium</option><option value="large">large</option></select><br />
+        Pizza Topping :<select id="top"></select><br />
+        Quantity      :<input id="Qty" type="number" /><br />
+        <input type="button" class="add-row" value="Order" />
+    </form>
+    <table>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

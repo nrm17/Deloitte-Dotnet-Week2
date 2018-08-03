@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #formdiv {
+            border: 5px solid grey;
+            background-color: lightgray;
+        }
+
+        .header {
+            background-color: darkgrey;
+        }
+
+        .even {
+            background-color: lightgrey;
+        }
+
+        .tablediv {
+            overflow-x: auto;
+        }
+
+        .tabledetails {
+            padding: 8px 14px 4px 8px;
+            border-collapse: collapse;
+            border: 3px solid darkgray;
+        }
+
+        .highlight {
+            border: 1px solid black;
+        }
+
+        tr, td {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: x-large;
+            height: 50px;
+            border-spacing: 10px 50px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function validate() {
+            var name = document.getElementById("txtname").value;
+            if (name == "") {
+                alert("Name cannot be blank.");
+                return;
+            }
+            var age = parseInt(document.getElementById("txtage").value);
+            if (isNaN(age)) {
+                alert("Enter age as number:");
+                return;
+            }
+            var g = "";
+            var gen = document.getElementsByName("gender");
+            if (gen[0].checked)
+                g = gen[0].value;
+            if (gen[1].checked)
+                g = gen[1].value;
+            if (!((gen[0].checked) || (gen[1].checked))) {
+                alert("Select Gender.");
+                return;
+            }
+            var loc = document.getElementById("city").value;
+            if (loc == "select") {
+                alert("Select City.");
+                return;
+            }
+            alert(name+" , "+age+" , "+g+" , "+loc);
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+    <table id="main">
+        <tr>
+            <td>
+                <div class="tablediv">
+                    <h3>List Of Persons</h3><br />
+                    <table border="0" class="tabledetails" cellpadding="10">
+                        <tr class="header">
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr class="odd">
+                            <td>Shahzad</td>
+                            <td>Male</td>
+                            <td>30</td>
+                            <td>lahore</td>
+                            <td><a href="">Update</a>/<a href="">Remove</a></td>
+                        </tr>
+                        <tr class="even">
+                            <td>Danial</td>
+                            <td>Male</td>
+                            <td>34</td>
+                            <td>islamabad</td>
+                            <td><a href="">Update</a>/<a href="">Remove</a></td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Sara</td>
+                            <td>Female</td>
+                            <td>34</td>
+                            <td>Karachi</td>
+                            <td><a href="">Update</a>/<a href="">Remove</a></td>
+                        </tr>
+                        <tr class="even">
+                            <td>Tahir</td>
+                            <td>Male</td>
+                            <td>38</td>
+                            <td>lahore</td>
+                            <td><a href="">Update</a>/<a href="">Remove</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td align="center">
+                <h3>Add/Update/Delete Form</h3>
+                <div id="formdiv">
+                    <table cellpadding="10">
+
+                        <tr>
+                            <td>Enter Name:</td>
+                            <td><input type="text" class="highlight" id="txtname" /></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td><input type="radio" name="gender" value="male" class="highlight"> Male</td>
+                            <td><input type="radio" name="gender" value="female" class="highlight"> Female</td>
+                        </tr>
+                        <tr>
+                            <td>Enter Age:</td>
+                            <td><input type="number" max="110" min="0" class="highlight" id="txtage" /></td>
+                        </tr>
+                        <tr>
+                            <td>City:</td>
+                            <td>
+                                <select name="cars" class="highlight" id="city">
+                                    <option value="select">select</option>
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+
+
+                            <td><input type="submit" value="Add" onclick="validate()" /></td>
+                            <td><input type="reset" value="Reset" /></td>
+                            <td><input type="button" value="Update" /></td>
+
+                        </tr>
+                    </table>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
